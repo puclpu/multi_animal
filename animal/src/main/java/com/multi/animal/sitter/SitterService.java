@@ -7,6 +7,8 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.multi.animal.user.UserVO;
+
 @Service
 public class SitterService {
 	@Autowired
@@ -17,13 +19,14 @@ public class SitterService {
 		dao.insert(sittervo);
 	}
 
-	public List<SitterVO> list(PageVO pvo,SitterVO sittervo) {
+	public List<SitterVO> list(PageVO pvo,SitterVO sittervo, UserVO uservo) {
 		System.out.println("<< service >>" + sittervo);
 		pvo.setStartEnd(pvo.getPage());
 		System.out.println("<< service >> " + pvo);
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("PageVO", pvo);
 		map.put("SitterVO", sittervo);
+		map.put("UserVO", uservo);
 		List<SitterVO> list = dao.list(map);
 //		System.out.println(list.get(0));
 		return list;
@@ -52,24 +55,35 @@ public class SitterService {
 		dao.update(vo);
 	}
 
-	public List<SitterVO> filter(FilterVO filtervo, PageVO pagevo) {
+	public List<SitterVO> filter(FilterVO filtervo, PageVO pagevo, UserVO uservo) {
 		pagevo.setStartEnd(pagevo.getPage());
 		System.out.println(pagevo);
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("PageVO", pagevo);
 		map.put("FilterVO", filtervo);
+		map.put("UserVO", uservo);		
 		List<SitterVO> list = dao.filter(map);
 //		System.out.println(list.get(0));
 		return list;
 		
 	}
 
-	public int searchCount(SitterVO sittervo) {
-		return dao.searchCount(sittervo);
+	public int searchCount(SitterVO sittervo, UserVO uservo) {
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("SitterVO", sittervo);
+		map.put("UserVO", uservo);
+		return dao.searchCount(map);
 	}
 
-	public int filterCount(FilterVO filtervo) {
-		return dao.filterCount(filtervo);
+	public int filterCount(FilterVO filtervo, UserVO uservo) {
+		Map<String, Object> map = new HashMap<String, Object>();
+		map.put("FilterVO", filtervo);
+		map.put("UserVO", uservo);
+		return dao.filterCount(map);
+	}
+
+	public UserVO getSigunguCode(String searcher) {
+		return dao.getSigunguCode(searcher);
 	}
 
 

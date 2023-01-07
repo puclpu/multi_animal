@@ -11,6 +11,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.multi.animal.user.UserVO;
+
 
 @Controller
 public class SitterController {
@@ -37,10 +39,13 @@ public class SitterController {
 	}
 	
 	@RequestMapping("sitter/sitter_search")
-	public void list(PageVO pagevo, Model model,SitterVO sittervo) {
-		List<SitterVO> list = sitterService.list(pagevo, sittervo);
-//		int count = sitterService.count();
-		int count = sitterService.searchCount(sittervo);
+	public void list(PageVO pagevo, Model model,SitterVO sittervo, UserVO uservo, String searcher) {
+		// 검색자의 시군구 코드 받아오기
+		uservo = sitterService.getSigunguCode(searcher);
+		System.out.println(uservo);
+		
+		List<SitterVO> list = sitterService.list(pagevo, sittervo, uservo);
+		int count = sitterService.searchCount(sittervo, uservo);
 		System.out.println(count);
 		int pages = page.pages(count);
 		System.out.println(pages);
@@ -87,12 +92,16 @@ public class SitterController {
 	}
 	
 	@RequestMapping("sitter/sitter_filter")
-	public void filter(PageVO pagevo, FilterVO filtervo, Model model) {
+	public void filter(PageVO pagevo, FilterVO filtervo, Model model, UserVO uservo, String searcher) {
+		// 검색자의 시군구 코드 받아오기
+		uservo = sitterService.getSigunguCode(searcher);
+		System.out.println(uservo);
+		
 		System.out.println(pagevo);
 		System.out.println(filtervo);
-		List<SitterVO> list = sitterService.filter(filtervo, pagevo);
+		List<SitterVO> list = sitterService.filter(filtervo, pagevo, uservo);
 //		int count = sitterService.count();
-		int count = sitterService.filterCount(filtervo);
+		int count = sitterService.filterCount(filtervo, uservo);
 		int pages = page.pages(count);
 		model.addAttribute("list", list);
 		model.addAttribute("count", count);

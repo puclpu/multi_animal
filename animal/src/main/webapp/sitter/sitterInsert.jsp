@@ -103,42 +103,7 @@ table{
 					</td>
 				</tr>
 			</table> <br>
-			
 			<input type="hidden" name="userId" value="<%=session.getAttribute("userId")%>">
-			
-			<!-- 예약
-			<select name="reserve">
-				<option value="구해요">구해요
-				<option value="완료">완료
-			</select> <br>
-			종
-			<select name="species" id="species">
-				<option value="강아지" selected="selected">강아지</option>
-				<option value="고양이">고양이</option>
-				<option value="기타">기타</option>
-			</select> <br>
-			돌봄
-			<select name="care">
-				<option value="방문 돌봄 (30분)">방문 돌봄 (30분)
-				<option value="산책 돌봄 (30분)">산책 돌봄 (30분)
-			</select> <br>
-			날짜
-			<input type="date" name="date" id="currentDate" min="2022-12-24"
-				max="2023-12-31"> 
-			<script>
-			document.getElementById('currentDate').value = new Date().toISOString().substring(0, 10);
-			</script><br>
-			마리
-			<select name="animals">
-				<option value="1">1
-				<option value="2">2
-				<option value="3">3
-			</select> 마리 <br>
-			기타 요구사항
-			<textarea name="comment" rows="5" cols="20" form="form"></textarea>
-			이미지
-			<input type="file" name="file" id="file"> <br>
-			<button type="submit">등록</button> -->
 		</form>
 	</div> <!-- center -->
 </div> <!-- total -->

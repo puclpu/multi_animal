@@ -71,6 +71,7 @@ li {
 				document.getElementsByClassName('currentDate')[1].value = new Date().toISOString().substring(0, 10);
 			</script>
 			<input name="page" type="hidden" value="1">
+			<input type="hidden" name="searcher" value="<%=session.getAttribute("userId") %>">
 			<button>검색</button>
 		</form>
 	</div>

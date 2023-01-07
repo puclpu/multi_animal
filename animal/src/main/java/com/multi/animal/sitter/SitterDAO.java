@@ -7,6 +7,8 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.multi.animal.user.UserVO;
+
 
 @Repository
 public class SitterDAO {
@@ -20,6 +22,7 @@ public class SitterDAO {
 	public List<SitterVO> list(Map<String, Object> map) {
 		System.out.println("<< DAO >>"+map.get("SitterVO"));
 		System.out.println("<< DAO >>"+map.get("PageVO"));
+		System.out.println("<< DAO >>"+map.get("UserVO"));
 		return my.selectList("sitter.search", map);
 	}
 
@@ -44,16 +47,20 @@ public class SitterDAO {
 	public List<SitterVO> filter(Map<String, Object> map) {
 		System.out.println("<< DAO >>"+map.get("FilterVO"));
 		System.out.println("<< DAO >>"+map.get("PageVO"));
+		System.out.println("<< DAO >>"+map.get("UserVO"));
 		return my.selectList("sitter.filter", map);
 	}
 
-	public int searchCount(SitterVO sittervo) {
-		return my.selectOne("sitter.scount", sittervo);
+	public int searchCount(Map<String, Object> map) {
+		return my.selectOne("sitter.scount", map);
 	}
 
-	public int filterCount(FilterVO filtervo) {
-		// TODO Auto-generated method stub
-		return my.selectOne("sitter.fcount", filtervo);
+	public int filterCount(Map<String, Object> map) {
+		return my.selectOne("sitter.fcount", map);
+	}
+
+	public UserVO getSigunguCode(String userId) {
+		return my.selectOne("user.one", userId);
 	}
 
 	
