@@ -6,6 +6,26 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script type="text/javascript" src="../resources/js/jquery-3.6.1.min.js"></script>
+<script type="text/javascript">
+	function checkNull(){
+		var frm = document.form1;
+		
+		if(!frm.name.value) {
+			alert("이름을 입력하세요");
+			return false;
+		}
+
+		if(!frm.phone.value) {
+			alert("전화번호를 입력하세요");
+			return false;
+		}
+
+		if(!frm.add1.value) {
+			alert("주소를 입력하세요");
+			return false;
+		}
+	}
+</script>
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 <script
@@ -41,7 +61,7 @@ table {
 			<jsp:include page="../../../top.jsp"></jsp:include>
 		</div>
 		<div id="center">
-			<form action="join">
+			<form action="join" name="form1" onsubmit="return checkNull();">
 				<table class="table table-borderless">
 					<tr>
 						<td>아이디</td>
@@ -54,7 +74,7 @@ table {
 					</tr>
 					<tr>
 						<td>전화번호</td>
-						<td><input type="text" name="phone"></td>
+						<td><input type="text" name="phone" placeholder="010-1234-5678"></td>
 					</tr>
 					<tr>
 						<td>주소</td>
@@ -104,7 +124,6 @@ table {
 					</tr>
 					<tr><td colspan="2"><button class="btn btn-light">가입</button></td></tr>
 				</table>
-				
 			</form>
 		</div>
 	</div>

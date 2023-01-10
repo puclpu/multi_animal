@@ -176,6 +176,18 @@
 			<version>2.8.7</version>
 		</dependency>
 
+		<!-- mongo db -->
+		<dependency>
+			<groupId>org.mongodb</groupId>
+			<artifactId>mongo-java-driver</artifactId>
+			<version>3.2.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-mongodb</artifactId>
+			<version>1.9.1.RELEASE</version>
+		</dependency>
 
 	</dependencies>
 	<build>

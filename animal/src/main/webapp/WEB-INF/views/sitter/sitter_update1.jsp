@@ -46,6 +46,15 @@
 		})
 		
 	})
+	
+	function checkNull(){
+		var frm = document.form1;
+		
+		if (!frm.file.value) {
+			alert("이미지를 등록하세요!");
+			return false;
+		}
+	}
 </script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>

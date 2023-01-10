@@ -9,6 +9,14 @@ public class UserVO {
 	private String sigungu;
 	private String sigunguCode;
 	
+	private String sido;
+	public String getSido() {
+		return sido;
+	}
+	public void setSido(String sido) {
+		this.sido = sido;
+	}
+	
 	public String getUserId() {
 		return userId;
 	}

@@ -3,31 +3,14 @@
     pageEncoding="UTF-8"%>
     <%
     	SitterVO vo = (SitterVO)request.getAttribute("vo");
-    	String writer = vo.getUserId();
-    	String userId = (String)session.getAttribute("userId");
-    	System.out.println("writer>>" + writer);
-    	System.out.println("user>>" + userId);
+    	String userId = vo.getUserId();
+    	System.out.println(userId);
     %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script type="text/javascript" src="../resources/js/jquery-3.6.1.min.js"></script>
-<script type="text/javascript">
-	$(function() {
-		var writer = "<%=writer %>";
-		var userId = "<%=userId %>";
-		
-		if (writer != userId) {
-			$("#btn").hide();			
-		}
-		
-		
-		
-	})
-	
-</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 <style type="text/css">
 #total {
@@ -73,6 +56,7 @@
 			<tr><td class="comment">${vo.comment }<td></tr>
 			
 		</table>
+		<%if (session.getAttribute("userId") == userId) { %>
 		<div id="btn">
 			<a href="sitter_update1?sitterId=${vo.sitterId }">
 				<button class="btn btn-outline-secondary">수정</button>
@@ -81,6 +65,7 @@
 				<button class="btn btn-outline-secondary">삭제</button>
 			</a>
 		</div>
+		<% }%>
 	</div> <!-- center -->
 </div> <!-- total -->
 
