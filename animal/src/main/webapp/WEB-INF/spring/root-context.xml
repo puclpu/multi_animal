@@ -40,7 +40,7 @@
 	<!-- mongo -->
 	<mongo:mongo-client
         host="localhost"
-        port="27017" credentials="winner:1234@shop2" >
+        port="27017" credentials="winner:1234@animal" >
         <mongo:client-options
             connections-per-host="50"
             threads-allowed-to-block-for-connection-multiplier="10"
@@ -53,7 +53,7 @@
  
     <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
         <constructor-arg ref="mongo" />
-        <constructor-arg name="databaseName" value="shop2" />
+        <constructor-arg name="databaseName" value="animal" />
     </bean>
 	
 </beans>

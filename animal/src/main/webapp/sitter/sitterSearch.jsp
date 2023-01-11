@@ -107,10 +107,15 @@ form{
 			</li>
 		</ul>
 	</div> <!-- tab menu -->
+	<div id="sChatbot">
+		<a href="sitterChatbot.jsp">
+			<button>챗봇</button>
+		</a>
+	</div> <!-- chatbot -->
 	<div class="alert alert-success alert-dismissible fade show" style="position: absolute; bottom: 0; margin: 0 auto;">
 		<button type="button" class="close" data-dismiss="alert">&times;</button>
 		<strong>참고!</strong> 시터 검색은 <%=session.getAttribute("name") %>님의 주소 정보를 기반으로 결과를 제공합니다.
-	</div>
+	</div> <!-- alert -->
 </div> <!-- total -->
 
 	<script>
