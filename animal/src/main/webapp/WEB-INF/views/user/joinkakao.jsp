@@ -61,7 +61,7 @@ table {
 			<jsp:include page="../../../top.jsp"></jsp:include>
 		</div>
 		<div id="center">
-			<form action="join" name="form1" onsubmit="return checkNull();">
+			<form action="join" name="form1" onsubmit="return checkNull();" method="post">
 				<table class="table table-borderless">
 					<tr>
 						<td>아이디</td>

@@ -14,6 +14,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script type="text/javascript" src="../resources/js/jquery-3.6.1.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 <script type="text/javascript">
 	$(function() {
 		var writer = "<%=writer %>";
@@ -28,13 +29,7 @@
 	})
 	
 </script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 <style type="text/css">
-#total {
-    width:100%;
-    height:100%;
-    background:#000;
-}
 #center {
 	width:680px;
     height:500px;
@@ -54,7 +49,7 @@
 </style>
 </head>
 <body>
-<div class = "total">
+<div id = "total">
 	<a href="http://localhost:8081/animal/index.jsp" style="position: fixed;">
 		<img alt="logo" src="../resources/img/순양.png" width="100px;">
 	</a>

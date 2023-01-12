@@ -11,42 +11,9 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 <script type="text/javascript" src="../resources/js/jquery-3.6.1.min.js"></script>
 <link rel="stylesheet" href="../resources/css/sittercss.css">
-<style type="text/css">
-#total {
-    width:100%;
-    position: relative;
-}
-*{margin:0; padding:0;}
-ul{list-style:none;}
-a{text-decoration:none; color:#333;}
-.wrap{padding:15px; letter-spacing:-0.5px;}
-.tab_menu{
-	/* position:relative;
-    height:300px;
-     */
-    width:500px;
-    height:300px;
-    margin:0 auto;
-    margin-top: 50px;
-	}
-.tab_menu .list{overflow:hidden;}
-.tab_menu .list li{float:left; margin-right:14px;}
-.tab_menu .list .btn{font-size:28px;}
-.tab_menu .list .cont{display:none; position:absolute; top:60px; left:0; background:#555; color:#fff; text-align:center; width:500px; height:220px; }
-.tab_menu .list li.is_on .btn{font-weight:bold; color:gray;}
-.tab_menu .list li.is_on .cont{display:block;}
-
-form{
-	position:relative;
-	width: 380px;
-	height: 160px;
-	margin:0 auto;
-	margin-top: 60px;
-} 
-</style>
 </head>
 <body>
-<div class="total">
+<div id="total">
 	<a href="http://localhost:8081/animal/index.jsp" style="position: fixed;">
 		<img alt="logo" src="../resources/img/순양.png" width="100px;">
 	</a>

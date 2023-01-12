@@ -6,29 +6,10 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-<style type="text/css">
-#total {
-    width:100%;
-    height:100%;
-    background:#000;
-}
-#center {
-	width:500px;
-    height:500px;
-    margin:0 auto;
-    margin-top: 90px;
-    text-align: center;
-}
-span{
-	padding-left: 25px;
-}
-h5{
-	padding: 10px;
-}
-</style>
+<link rel="stylesheet" href="../resources/css/sittercss.css">
 </head>
 <body>
-<div class = "total">
+<div id = "total">
 	<a href="http://localhost:8081/animal/index.jsp" style="position: fixed;">
 		<img alt="logo" src="../resources/img/순양.png" width="100px;">
 	</a>

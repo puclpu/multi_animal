@@ -5,7 +5,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="../resources/css/sittercss.css">
 <script type="text/javascript" src="../resources/js/sockjs-0.3.4.js"></script>
 <script type="text/javascript" src="../resources/js/stomp.js"></script>
 <script type="text/javascript"
@@ -40,7 +39,27 @@
 				showMessageOutput(JSON.parse(messageOutput.body));
 			});
 		});
+		//4.서버에서 보냈을 때 어떻게 처리할지 지
 
+		/* //chat주소 서버와의 소켓객체 생성
+		var socket = new SockJS('${pageContext.request.contextPath}/chat');
+		//소켓을 통해 클라이언트 객체 획득 
+		stompClient = Stomp.over(socket);
+		//소켓 클라이언트를 통해 연결 획득 
+		stompClient.connect({}, function(frame) {
+			setConnected(true); //연결 설정 
+			console.log('Connected: ' + frame);
+			//소켓 클라이언트를 통해 챗팅하고 싶은 특정 사이트에 연결 
+			//messageOutput : 받은 메시지
+			//topic/messages로 가입한 클라이언트에게 messageOutput을 보냄.
+			//@SendTo("/topic/messages")와 동일해야함.
+			//config.enableSimpleBroker("/topic");와 동일해야함.
+			stompClient.subscribe('/topic/messages',
+					function(messageOutput) {
+						//서버에서 받은 메시지 출력 
+						showMessageOutput(JSON.parse(messageOutput.body));
+					});
+		}); */
 	}
 
 	//서버로 연결 끊음. 
@@ -63,10 +82,7 @@
 			'text' : text
 		}));
 		
-		// 보낸 메시지 append
 		var p = document.createElement('p');
-		var sender = 'sender';
-		p.setAttribute('class', sender);
 		p.style.wordWrap = 'break-word';
 		p.appendChild(document.createTextNode(text));
 		response.appendChild(p);
@@ -82,28 +98,20 @@
 		response.appendChild(p);
 		document.getElementById('text').innerHTML = '';
 	}
-	
 </script>
-<style type="text/css">
-.sender{
-	text-align: right;
-}
-</style>
 </head>
 <body onload="connect();">
 	<div id="total">
 		<div id="center">
-			<div>
-				안녕하세요!<br>
-				
-			</div>
+			<div>안녕하세요!<br>0) 챗봇 사용하기</div>
+			<br>
 			<div id="response">
 			
 			</div>
 			<div id="conversationDiv">
 				<table>
 					<tr>
-						<td><input type="text" id="text" style="width: 500px;"></td>
+						<td><input type="text" id="text" style="width: 400px; background: yellow"></td>
 						<td><button id="sendMessage" onclick="sendMessage();">Send</button></td>
 					</tr>
 				</table>

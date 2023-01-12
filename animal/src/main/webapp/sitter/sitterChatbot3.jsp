@@ -95,7 +95,6 @@
 		<div id="center">
 			<div>
 				안녕하세요!<br>
-				
 			</div>
 			<div id="response">
 			
@@ -103,7 +102,7 @@
 			<div id="conversationDiv">
 				<table>
 					<tr>
-						<td><input type="text" id="text" style="width: 500px;"></td>
+						<td><input type="text" id="text" style="width: 400px; background: yellow"></td>
 						<td><button id="sendMessage" onclick="sendMessage();">Send</button></td>
 					</tr>
 				</table>

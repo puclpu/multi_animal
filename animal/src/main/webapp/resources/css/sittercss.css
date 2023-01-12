@@ -1,66 +1,45 @@
 @charset "UTF-8";
-/* top */
-*{margin:0; padding:0;}
-ul{list-style:none;}
-a{text-decoration:none; color:#333;}
-.menu:after{display:block; content:''; clear:both;}
-.menu > li{position:relative; float:left; margin-right:50px;}
-.menu > li > a{display:block; padding: 15px; background:#333; height:40px; line-height:40px;}
-.menu > li:hover .depth_1 {display:block;}
-.menu .depth_1{display:none; position:absolute; left:0; right:0; text-align:center; width: 80px;}
-.menu .depth_1 a{display:block; padding:5px; background:#666; color:#fff;}
-
-#top {
+#total{
 	width: 100%;
-	height: 50px;
+	position: relative;
 }
-
-/* login, logout */
-.my{
-	font-size: 10px;
-	float: right;
-	padding : 5px;
+#center{
+	width: 500px;
+	height: 500px;
+	margin: 0 auto;
 }
-.my ul {list-style: none;}
-.my li {padding : 10px;}
-
-/* sitter */
-#total {
-    width:100%;
-    height:100%;
-    background:#000;
+#insertform{
+	text-align: center;
 }
-.wrap{padding:15px; letter-spacing:-0.5px;}
 .tab_menu{
-	position:relative;
-	width:500px;
+	position : relative;
+    width:500px;
     height:300px;
     margin:0 auto;
     margin-top: 50px;
 	}
-.tab_menu .list{overflow:hidden;}
+.tab_menu .list{overflow:hidden; list-style: none;}
 .tab_menu .list li{float:left; margin-right:14px;}
 .tab_menu .list .btn{font-size:28px;}
-.tab_menu .list .cont{display:none; position:absolute; top:60px; left:0; background:#555; color:#fff; text-align:center; width:500px; height:240px; }
+.tab_menu .list .cont{display:none; position:absolute; top:100px; left:0; background:gray; color:#fff; text-align:center; width:500px; height:220px; }
 .tab_menu .list li.is_on .btn{font-weight:bold; color:gray;}
 .tab_menu .list li.is_on .cont{display:block;}
-.tab_menu .list form{
-	position:relative;
+.wrap{padding:15px; letter-spacing:-0.5px;}
+.tab_menu form{
+	position: relative;
 	width: 380px;
 	height: 160px;
-	margin:0 auto;
+	margin: 0 auto;
 	margin-top: 60px;
 }
-/* #total {
-    width:100%;
-    height:100%;
-    background:#000;
+
+*{margin:0; padding:0;}
+a{text-decoration:none; color:#333;}
+#center>span{
+	padding-left: 25px;
 }
-#center {
-	width:680px;
-    height:500px;
-    margin:0 auto;
-    margin-top: 50px;
+#center>h5{
+	padding: 10px;
 }
 #page, #result{
 	padding-top: 20px;
@@ -76,9 +55,11 @@ a{text-decoration:none; color:#333;}
 	height: 300px;
 	padding-right: 25px;
 }
-ul {
+#result ul{
 	list-style: none;
 }
-li {
+#result li{
 	float: left;
-} */
+}
+
+

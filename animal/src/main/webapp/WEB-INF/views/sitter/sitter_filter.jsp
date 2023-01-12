@@ -17,6 +17,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script type="text/javascript" src="../resources/js/jquery-3.6.1.min.js"></script>
+<link rel="stylesheet" href="../resources/css/sittercss.css">
 <script type="text/javascript">
 	$(function() {
 		var species = "<%=species%>";
@@ -32,42 +33,9 @@
 		
 	})
 </script>
-<style type="text/css">
-#total {
-    width:100%;
-    height:100%;
-    background:#000;
-}
-#center {
-	width:680px;
-    height:500px;
-    margin:0 auto;
-    margin-top: 50px;
-}
-#page, #result{
-	padding-top: 20px;
-	display: block;
-}
-#clearfix{
-	height: 0;
-    clear: both;
-    float: clear;
-}
-.one{
-	width: 200px;
-	height: 300px;
-	padding-right: 25px;
-}
-ul {
-	list-style: none;
-}
-li {
-	float: left;
-}
-</style>
 </head>
 <body>
-	<div class="total">
+	<div id="total">
 		<a href="http://localhost:8081/animal/index.jsp" style="position: fixed;">
 			<img alt="logo" src="../resources/img/순양.png" width="100px;">
 		</a>
