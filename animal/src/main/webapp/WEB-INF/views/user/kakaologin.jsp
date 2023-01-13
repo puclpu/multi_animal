@@ -5,5 +5,6 @@
 	UserVO vo = (UserVO)request.getAttribute("vo");
 	session.setAttribute("userId", vo.getUserId());
 	session.setAttribute("name", vo.getName());
+	session.setAttribute("address", vo.getAddress());
 	response.sendRedirect("index.jsp");
 %>

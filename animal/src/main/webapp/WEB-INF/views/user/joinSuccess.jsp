@@ -7,6 +7,7 @@
  	String name = vo.getName();
  	session.setAttribute("userId", userId);
  	session.setAttribute("name", name);
+ 	session.setAttribute("address", vo.getAddress());
  %>
 <!DOCTYPE html>
 <html>

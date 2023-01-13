@@ -69,8 +69,17 @@
 		p.setAttribute('class', sender);
 		p.style.wordWrap = 'break-word';
 		p.appendChild(document.createTextNode(text));
+		var li = document.createElement('li');
+		li.appendChild(p);
+		response.appendChild(li);
+		document.getElementById('text').innerHTML = ' ';
+	/* 	var p = document.createElement('p');
+		var sender = 'sender';
+		p.setAttribute('class', sender);
+		p.style.wordWrap = 'break-word';
+		p.appendChild(document.createTextNode(text));
 		response.appendChild(p);
-		document.getElementById('text').innerHTML = '';
+		document.getElementById('text').innerHTML = ''; */
 	}
 
 	//받은 데이터를 원하는 위치에 넣음. ==> 받은 데이터를 채팅목록으로 쌓는다
@@ -79,14 +88,37 @@
 		var p = document.createElement('p');
 		p.style.wordWrap = 'break-word';
 		p.appendChild(document.createTextNode(messageOutput.menu));
+		var li = document.createElement('li');
+		li.appendChild(p);
+		response.appendChild(li);
+		document.getElementById('text').innerHTML = ' ';
+		/* var response = document.getElementById('response');
+		var p = document.createElement('p');
+		p.style.wordWrap = 'break-word';
+		p.appendChild(document.createTextNode(messageOutput.menu));
 		response.appendChild(p);
-		document.getElementById('text').innerHTML = '';
+		document.getElementById('text').innerHTML = ''; */
 	}
 	
 </script>
 <style type="text/css">
+li{
+	list-style: none;
+	width: 100%;
+	margin-top: 10px;
+	display: table;
+}
+p{
+	max-width : 63%;
+	padding : 10px;
+	margin-top: 10px;
+	display : inline-block;
+	background: silver;
+	border-radius: 0px 20px 20px 30px;
+}
 .sender{
-	text-align: right;
+	float: right;
+	border-radius: 30px 20px 0px 40px;
 }
 </style>
 </head>
@@ -94,16 +126,21 @@
 	<div id="total">
 		<div id="center">
 			<div>
-				안녕하세요!<br>
-				
+				<p>
+					안녕하세요!<br>
+					시터 챗봇입니다. 전문시터등록과 전문시터추천을 도와드립니다. 원하시는 메뉴를 입력해주세요.<br>
+					<span style="font-size: 10px;">예시)전문시터등록</span>
+				</p>
 			</div>
 			<div id="response">
-			
+				<ul>
+					
+				</ul>
 			</div>
 			<div id="conversationDiv">
 				<table>
 					<tr>
-						<td><input type="text" id="text" style="width: 500px;"></td>
+						<td><input type="text" id="text" style="width: 450px;"></td>
 						<td><button id="sendMessage" onclick="sendMessage();">Send</button></td>
 					</tr>
 				</table>
