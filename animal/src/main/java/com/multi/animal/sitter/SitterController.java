@@ -17,7 +17,7 @@ import com.multi.animal.user.UserVO;
 @Controller
 public class SitterController {
 	@Autowired
-	SitterService sitterService;
+	SitterServiceInterface sitterService;
 	
 	@Autowired
 	PageService page;

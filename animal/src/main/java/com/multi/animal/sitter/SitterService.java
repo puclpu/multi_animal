@@ -10,15 +10,17 @@ import org.springframework.stereotype.Service;
 import com.multi.animal.user.UserVO;
 
 @Service
-public class SitterService {
+public class SitterService implements SitterServiceInterface {
 	@Autowired
-	SitterDAO dao;
+	SitterDAOInterface dao;
 	
+	@Override
 	public void insert(SitterVO sittervo) {
 		System.out.println(sittervo);
 		dao.insert(sittervo);
 	}
 
+	@Override
 	public List<SitterVO> list(PageVO pvo,SitterVO sittervo, UserVO uservo) {
 		System.out.println("<< service >>" + sittervo);
 		pvo.setStartEnd(pvo.getPage());
@@ -32,11 +34,13 @@ public class SitterService {
 		return list;
 	}
 
+	@Override
 	public int count() {
 		return dao.count();
 	}
 
 
+	@Override
 	public SitterVO one(String sitterId) {
 		System.out.println(sitterId);
 		SitterVO sittervo = dao.one(sitterId);
@@ -44,17 +48,20 @@ public class SitterService {
 		return sittervo;
 	}
 
+	@Override
 	public void delete(String sitterId) {
 		System.out.println(sitterId);
 		dao.delete(sitterId);
 		
 	}
 
+	@Override
 	public void update2(SitterVO vo) {
 		System.out.println("<< service >>"+vo);
 		dao.update(vo);
 	}
 
+	@Override
 	public List<SitterVO> filter(FilterVO filtervo, PageVO pagevo, UserVO uservo) {
 		pagevo.setStartEnd(pagevo.getPage());
 		System.out.println(pagevo);
@@ -68,6 +75,7 @@ public class SitterService {
 		
 	}
 
+	@Override
 	public int searchCount(SitterVO sittervo, UserVO uservo) {
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("SitterVO", sittervo);
@@ -75,6 +83,7 @@ public class SitterService {
 		return dao.searchCount(map);
 	}
 
+	@Override
 	public int filterCount(FilterVO filtervo, UserVO uservo) {
 		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("FilterVO", filtervo);
@@ -82,6 +91,7 @@ public class SitterService {
 		return dao.filterCount(map);
 	}
 
+	@Override
 	public UserVO getSigunguCode(String searcher) {
 		return dao.getSigunguCode(searcher);
 	}

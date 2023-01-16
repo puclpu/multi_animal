@@ -10,7 +10,6 @@
 </head>
 <body>
 <div class="total">	
-	<%=session.getAttribute("address") %>
 	<div id="my">
 		<jsp:include page="user/my.jsp"></jsp:include>
 	</div>

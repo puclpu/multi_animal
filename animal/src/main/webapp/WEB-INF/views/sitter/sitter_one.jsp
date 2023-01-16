@@ -23,9 +23,7 @@
 		if (writer != userId) {
 			$("#btn").hide();			
 		}
-		
-		
-		
+	
 	})
 	
 </script>
@@ -36,10 +34,10 @@
     margin:0 auto;
     margin-top: 90px;
 }
-.text, .comment{
+.sitterone, .comment{
 	padding-left: 10px;
 }
-.text{
+.sitterone{
 	height: 30px;
 }
 #btn{
@@ -62,9 +60,10 @@
 				<td rowspan="5"><img src="../resources/img/${vo.img }" width="300"></td>
 				<td style="font-weight: bold;" class="text">[${vo.reserve }]</td>
 			</tr>
-			<tr><td class="text">${vo.species }<td></tr>
-			<tr><td class="text">${vo.care }<td></tr>
-			<tr><td class="text">${vo.date }<td></tr>
+			<tr><td class="sitterone">${vo.species }<td></tr>
+			<tr><td class="sitterone">${vo.care }<td></tr>
+			<tr><td class="sitterone">${vo.date }<td></tr>
+			<tr><td class="sitterone">${vo.sitterTel }<td></tr>
 			<tr><td class="comment">${vo.comment }<td></tr>
 			
 		</table>

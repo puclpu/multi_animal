@@ -26,7 +26,7 @@ h5{
 	</div>
 	<div id="center">
 		<h5>시터 구인 등록이 완료되었습니다.</h5>
-		<a href="sitterList"><button class="btn btn-outline-secondary">목록보기</button></a>
+		<a href="sitterSearch.jsp"><button class="btn btn-outline-secondary">검색하기</button></a>
 		<span><a href="sitterInsert.jsp"><button class="btn btn-outline-secondary">구인등록</button></a></span>
 	</div> <!-- center -->
 </div> <!-- total -->

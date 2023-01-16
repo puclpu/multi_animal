@@ -22,7 +22,7 @@ public class UserController {
 //	}
 	
 	@Autowired
-	private UserService us;
+	private UserServiceInterface us;
 
 	@RequestMapping(value = "kakaologin", method=RequestMethod.GET)
 	public String user( @RequestParam(value = "code", required = false) String code ,

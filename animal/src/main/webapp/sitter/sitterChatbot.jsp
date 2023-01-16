@@ -6,6 +6,10 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="../resources/css/sittercss.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 <script type="text/javascript" src="../resources/js/sockjs-0.3.4.js"></script>
 <script type="text/javascript" src="../resources/js/stomp.js"></script>
 <script type="text/javascript"
@@ -32,7 +36,7 @@
 		//3.채팅방 지정하여 가입
 		stompClient.connect({}, function(frame) {
 			setConnected(true); //css설정
-			alert('연결됨.' + frame)
+			/* alert('연결됨.' + frame) */
 			//가입
 			//가입할 채팅방 이름, 닫을 때 어떻게 처리할 지 
 			stompClient.subscribe('/topic/messages', function(messageOutput) {
@@ -87,7 +91,8 @@
 		var response = document.getElementById('response');
 		var p = document.createElement('p');
 		p.style.wordWrap = 'break-word';
-		p.appendChild(document.createTextNode(messageOutput.menu));
+		p.innerHTML = messageOutput.menu;
+/* 		p.appendChild(document.createTextNode(messageOutput.menu)); */
 		var li = document.createElement('li');
 		li.appendChild(p);
 		response.appendChild(li);
@@ -140,8 +145,8 @@ p{
 			<div id="conversationDiv">
 				<table>
 					<tr>
-						<td><input type="text" id="text" style="width: 450px;"></td>
-						<td><button id="sendMessage" onclick="sendMessage();">Send</button></td>
+						<td><input type="text" id="text" style="width: 450px;" class="form-control form-control"></td>
+						<td><button id="sendMessage" onclick="sendMessage();" class="btn btn-light">Send</button></td>
 					</tr>
 				</table>
 			</div>

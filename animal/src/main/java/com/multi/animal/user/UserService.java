@@ -18,11 +18,12 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 @Service
-public class UserService {
+public class UserService implements UserServiceInterface {
 
 	@Autowired
-	UserDAO dao;
+	UserDAOInterface dao;
 	
+	@Override
 	public String getAccessToken (String authorize_code) {
 		String access_Token = "";
 		String refresh_Token = "";
@@ -81,6 +82,7 @@ public class UserService {
 		return access_Token;
 	}
 	
+	@Override
 	public HashMap<String, Object> getUserInfo(String access_Token) {
 
 		// 요청하는 클라이언트마다 가진 정보가 다를 수 있기에 HashMap타입으로 선언
@@ -126,18 +128,22 @@ public class UserService {
 	}
 
 
+	@Override
 	public int checkId(String userId) {
 		return dao.checkId(userId);
 	}
 
+	@Override
 	public void join(UserVO vo) {
 		dao.join(vo);
 	}
 
+	@Override
 	public String sumAddress(String add1, String add2) {
 		return add1 + " " + add2;
 	}
 
+	@Override
 	public UserVO login(String userId) {
 		return dao.one(userId);
 	}

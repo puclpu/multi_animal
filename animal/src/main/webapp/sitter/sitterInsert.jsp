@@ -19,6 +19,10 @@
 			alert("이미지를 등록하세요!");
 			return false;
 		}
+		if (!frm.sitterTel.value) {
+			alert("연락처를 입력하세요!");
+			return false;
+		}
 	}
 </script>
 </head>
@@ -82,6 +86,10 @@
 						document.getElementById('currentDate').value = new Date().toISOString().substring(0, 10);
 						</script>
 					</td>
+				</tr>
+				<tr>
+					<td>연락처</td>
+					<td><input type="text" id="sitterTel" name="sitterTel" class="form-control form-control"></td>
 				</tr>
 				<tr>
 					<td>기타 요구사항</td>

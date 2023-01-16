@@ -8,9 +8,8 @@ public class SitterVO {
 	private String date;
 	private int animals;
 	private String comment;
-	
 	private String img;
-	private String breed;
+	private String sitterTel;
 	
 	private String userId;
 	
@@ -111,14 +110,14 @@ public class SitterVO {
 
 
 
-	public String getBreed() {
-		return breed;
+	public String getSitterTel() {
+		return sitterTel;
 	}
 
 
 
-	public void setBreed(String breed) {
-		this.breed = breed;
+	public void setSitterTel(String sitterTel) {
+		this.sitterTel = sitterTel;
 	}
 
 
@@ -136,8 +135,8 @@ public class SitterVO {
 	@Override
 	public String toString() {
 		return "SitterVO [sitterId=" + sitterId + ", reserve=" + reserve + ", species=" + species + ", care=" + care
-				+ ", date=" + date + ", animals=" + animals + ", comment=" + comment + ", img=" + img + ", breed="
-				+ breed + ", userId=" + userId + "]";
+				+ ", date=" + date + ", animals=" + animals + ", comment=" + comment + ", img=" + img + ", SitterTel="
+				+ sitterTel + ", userId=" + userId + "]";
 	}
 	
 	
