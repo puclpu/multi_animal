@@ -44,7 +44,7 @@ public class UserService implements UserServiceInterface {
 			sb.append("grant_type=authorization_code");
             
 			sb.append("&client_id=49e39bb9722e8c1f0fa1acf8323ba21f"); //본인이 발급받은 key
-			sb.append("&redirect_uri=http://localhost:8081/animal/kakaologin"); // 본인이 설정한 주소
+			sb.append("&redirect_uri=http://localhost:8087/animal/kakaologin"); // 본인이 설정한 주소
             
 			sb.append("&code=" + authorize_code);
 			bw.write(sb.toString());

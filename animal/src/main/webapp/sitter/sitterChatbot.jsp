@@ -30,7 +30,7 @@
 	//서버로 연결함. 
 	function connect() {
 		//1.소켓 객체 생성
-		var socket = new SockJS('${pageContext.request.contextPath}/chat');
+		var socket = new SockJS('${pageContext.request.contextPath}/expert');
 		//2.데이터를 전송하고, 받을 수 있는 stompClent 객체 생성
 		stompClient = Stomp.over(socket);
 		//3.채팅방 지정하여 가입
@@ -39,7 +39,7 @@
 			/* alert('연결됨.' + frame) */
 			//가입
 			//가입할 채팅방 이름, 닫을 때 어떻게 처리할 지 
-			stompClient.subscribe('/topic/messages', function(messageOutput) {
+			stompClient.subscribe('/market/messages2', function(messageOutput) {
 				//서버에서 받은 메시지 출력 
 				showMessageOutput(JSON.parse(messageOutput.body));
 			});
@@ -62,7 +62,7 @@
 		var from = "<%=session.getAttribute("userId")%>";
 		var text = document.getElementById('text').value;
 		//url을 /app/cht을 호출하고,data를 json형태의 sring으로 만들어서 보내라. 
-		stompClient.send("/app/chat", {}, JSON.stringify({
+		stompClient.send("/app/expert", {}, JSON.stringify({
 			'from' : from,
 			'text' : text
 		}));

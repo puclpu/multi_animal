@@ -13,7 +13,9 @@ public class WebSocketConfig extends AbstractWebSocketMessageBrokerConfigurer {
 	// 채팅 방 이름 설정
 	@Override
 	public void configureMessageBroker(MessageBrokerRegistry config) {
-		config.enableSimpleBroker("/topic");
+//		config.enableSimpleBroker("/sitter");
+//		config.setApplicationDestinationPrefixes("/app");
+		config.enableSimpleBroker("/market");
 		config.setApplicationDestinationPrefixes("/app");
 	}
 	
@@ -22,8 +24,8 @@ public class WebSocketConfig extends AbstractWebSocketMessageBrokerConfigurer {
 	@Override
 	public void registerStompEndpoints(StompEndpointRegistry registry) {
 		// chat : 챗봇용
-		registry.addEndpoint("/chat"); // 접속하는 주소. 자바 소켓 통신
-		registry.addEndpoint("/chat").withSockJS(); // 자바 스크립트 소켓 통신.
+		registry.addEndpoint("/expert"); // 접속하는 주소. 자바 소켓 통신
+		registry.addEndpoint("/expert").withSockJS(); // 자바 스크립트 소켓 통신.
 	}
 
 }

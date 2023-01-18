@@ -29,12 +29,12 @@
 </head>
 <body>
 	<div id="total">
-		<a href="http://localhost:8081/animal/index.jsp"> <img alt="logo"
+		<%-- <a href="http://localhost:8081/animal/index.jsp"> <img alt="logo"
 			src="../resources/img/순양.png" width="100px;">
 		</a>
 		<div id="top" style="height: 50px; display: inline-block;">
 			<jsp:include page="../../../top.jsp"></jsp:include>
-		</div>
+		</div> --%>
 		<div id="center">
 			<h3>환영합니다.</h3>
 			<h3>회원가입이 완료되었습니다.</h3>

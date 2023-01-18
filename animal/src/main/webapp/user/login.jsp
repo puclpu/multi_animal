@@ -20,14 +20,14 @@
 </head>
 <body>
 	<div id="total">
-		<a href="http://localhost:8081/animal/index.jsp"
+		<%-- <a href="http://localhost:8081/animal/index.jsp"
 			style="position: fixed;"> <img alt="logo"
 			src="../resources/img/순양.png" width="100px;">
 		</a>
 		<div id="top"
 			style="height: 50px; display: inline-block; padding-left: 100px;">
 			<jsp:include page="../top.jsp"></jsp:include>
-		</div>
+		</div> --%>
 		<div id="center">
 			<script src="https://t1.kakaocdn.net/kakao_js_sdk/2.1.0/kakao.min.js"
 				integrity="sha384-dpu02ieKC6NUeKFoGMOKz6102CLEWi9+5RQjWSV0ikYSFFd8M3Wp2reIcquJOemx"
@@ -48,7 +48,7 @@
 							.authorize({
 								/* redirectUri: 'http://localhost:8081/animal/index.jsp', */
 								/* redirectUri : 'http://localhost:8081/animal/kakaologin/oauth', */
-								redirectUri : 'http://localhost:8081/animal/kakaologin',
+								redirectUri : 'http://localhost:8087/animal/kakaologin',
 							});
 				}
 			</script>

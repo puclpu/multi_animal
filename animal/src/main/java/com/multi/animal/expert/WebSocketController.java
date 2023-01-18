@@ -11,8 +11,9 @@ public class WebSocketController {
 	@Autowired
 	ExpertService es;
 	
-	@MessageMapping("/chat")
-	@SendTo("/topic/messages")
+	@MessageMapping("/expert")
+//	@SendTo("/sitter/messages2")
+	@SendTo("/market/messages2")
 	public OutputMessage2 send2(Message message, ExpertVO expertvo) {
 		String menu = "";
 		switch (message.getText()) {

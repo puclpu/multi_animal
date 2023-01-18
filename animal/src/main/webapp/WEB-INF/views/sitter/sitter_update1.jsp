@@ -74,12 +74,12 @@ p{
 </head>
 <body>
 <div id = "total">
-	<a href="http://localhost:8081/animal/index.jsp" style="position: fixed;">
+	<%-- <a href="http://localhost:8081/animal/index.jsp" style="position: fixed;">
 		<img alt="logo" src="../resources/img/순양.png" width="100px;">
 	</a>
 	<div id = "top" style="height: 50px; display: inline-block; padding-left: 100px;">
 		<jsp:include page="../../../top.jsp"></jsp:include>
-	</div>
+	</div> --%>
 	<div id="center">
 		<form action="sitter_update2" id="form" method="post" enctype="multipart/form-data" name="form1">
 			<table class="table table-borderless">
