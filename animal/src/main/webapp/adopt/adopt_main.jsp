@@ -52,7 +52,7 @@
 </script>
 </head>
 <body>
-<%-- <%@ include file="animal_header2.jsp" %> --%> 
+<jsp:include page="../header/animal_header.jsp"></jsp:include> 
 		
 	<div id="Adopt_main_insertB">
 		<!-- <button id="Adopt_main_insert">등록</button> -->

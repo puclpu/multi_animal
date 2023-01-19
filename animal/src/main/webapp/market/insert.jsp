@@ -7,6 +7,7 @@
 		response.sendRedirect("marketHome.jsp");
 	}
 %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,6 +33,12 @@ document.form.roadFullAddr.value = roadFullAddr;
 </script>
 </head>
 <body>
+<jsp:include page="../header/animal_header.jsp"></jsp:include>
+<br>
+<br>
+<br>
+<br>
+<br>
 <div class="marketHomeDiv">
 	<form name="form" id="form" action="insert" method="post"
 		enctype="multipart/form-data">

@@ -84,6 +84,12 @@
 </script>
 </head>
 <body>
+<jsp:include page="../../../header/animal_header.jsp"></jsp:include>
+<br>
+<br>
+<br>
+<br>
+<br>
 <div class="marketHomeDiv">
 	<table border="1" class="marketTable">
 		<tr>
@@ -124,9 +130,8 @@
 	</table>
 	<ul>
 		<li><textarea id="message" placeholder="메시지를 입력하세요"
-				style="margin-left: 250px"></textarea></li>
-		<li><button id="send" onclick="sendMessage();"
-				style="margin: 10px 0 0 30px;" class="marketButton">보내기</button></li>
+				class="sendArea"></textarea></li>
+		<li><button id="send" onclick="sendMessage();" class="sendButton">전송</button></li>
 	</ul>
 </div>
 </body>

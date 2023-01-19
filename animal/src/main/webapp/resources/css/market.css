@@ -135,6 +135,12 @@ textarea {
 	padding: 10px 30px;
 }
 
+.sendArea {
+	border-radius: 10px;
+	padding: 10px 30px;
+	margin-left: 140px;
+}
+
 .marketButton {
 	-webkit-appearance: none;
 	-moz-appearance: none;
@@ -145,6 +151,19 @@ textarea {
 	border-width: 1pt;
 	border-color: gray;
 	margin: auto;
+	color: #990000;
+}
+
+.sendButton{
+	margin: 10px 0 0 0px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background-color: #FFE1E1;
+	appearance: none;
+	padding: 8px 12px;
+	border-radius: 10px;
+	border-width: 1pt;
+	border-color: gray;
 	color: #990000;
 }
 

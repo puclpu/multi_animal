@@ -106,7 +106,7 @@
 	    <c:if test="${i%j == 0 }">
 		    <tr>
 			    </c:if>
-			       <td style="height: 400px; width: 350px;">
+			       <td style="height: 320px; width: 350px;">
 			       		<c:if test="${one.finish == 0}">
 			       			<button style="background-color: aqua; font-weight: bold;">분양중</button>
 			       		</c:if>

@@ -21,9 +21,9 @@ a{
 
 /* medicalHeader.jsp */
 #medicalHeader{
-	width: 100%;
+	width: 98%;
 	height: 110px;
-	border: 1px solid rgba(0, 0, 0, 0.07);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.07);
 	/* position: fixed;
 	background: rgb(255, 255, 255);
 	z-index: 999999; */
@@ -103,15 +103,13 @@ a{
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	height: 100%;
-
+	height: 170%;
 }
 
 .medical-search{
     width: 765px;
     height: 30px;
-    margin-top: 130px;
-    padding-left: 10px;
+    margin-top: 30px;
 }
 
 .medical-search::placeholder{
@@ -123,6 +121,9 @@ a{
 		width: 430px;
     	height: 30px;
     	padding-left: 10px;
+    	display: flex;
+    	flex-direction: row;
+    	align-items: center;
 	}
 }
 
@@ -170,8 +171,22 @@ a{
 #medicalSearchResult{
 	overflow: scroll;
 	margin-top: 10px;
-	width: 1700px;
+	width: 90%;
 	text-align: center;
+}
+
+#searchBtn{
+	width: 50px;
+    height: 25px;
+    border: none;
+    background-color: #E0E0E0;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+#searchBtn:hover{
+	background-color: rgba(0,0,0,0.5);
 }
 
 #medicalSearchResultInfo{
@@ -187,12 +202,11 @@ a{
     border-radius: 5px;
 }
 
-.medical-info-dim{
-	position: absolute;
-	display: none;
-    z-index: -1;
-    background: rgba(0,0,0,0.8);
-}
+/* .medical-info-dim{ */
+/* 	position: absolute; */
+/* 	display: none; */
+/*     background: rgba(0,0,0,0.8); */
+/* } */
 
 .count-list{
 	font-size: 30px;
@@ -251,7 +265,7 @@ a{
 
 .medical-one-wrap > #map{
 	width: 700px;
-	height: 550px;
+	height: 450px;
 	border: 3px solid rgba(0,0,255, 0.25);
 	border-radius: 10px;
 	margin-bottom: 10px;

@@ -24,6 +24,13 @@ public class MedicalController {
 			}
 	}
 	
+	@RequestMapping("medical/medicalAddrResult")
+	public String address(MedicalVO vo, Model model) {
+			List<MedicalVO> list = dao.LoadAddress(vo);
+				model.addAttribute("list", list);	
+				return "medical/medicalAddrResult";
+	}
+	
 	@RequestMapping("medical/medicalInfo")
 	public String info(MedicalVO vo, Model model) {
 			MedicalVO result = dao.SearchOne(vo);

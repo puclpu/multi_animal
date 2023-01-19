@@ -35,6 +35,12 @@ $(function() {
 </script>
 </head>
 <body>
+<jsp:include page="../header/animal_header.jsp"></jsp:include>
+<br>
+<br>
+<br>
+<br>
+<br>
 <div class="marketHomeDiv">
 	<form name="form" id="form" action="update" method="post"
 		enctype="multipart/form-data">

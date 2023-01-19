@@ -114,6 +114,12 @@ $(function() {
 </script>
 </head>
 <body>
+<jsp:include page="../../../header/animal_header.jsp"></jsp:include>
+<br>
+<br>
+<br>
+<br>
+<br>
 <div class="marketHomeDiv">
 	<table border="1" class="marketTable">
 		<tr>
@@ -144,7 +150,10 @@ $(function() {
 			</td>
 		</tr>
 	</table>
+	<br>
 	<div id="button"></div>
+	<br>
+
 </div>
 </body>
 </html>

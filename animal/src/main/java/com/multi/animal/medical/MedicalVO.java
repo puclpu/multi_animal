@@ -7,13 +7,20 @@ public class MedicalVO {
 	private String rAddr;
 	private String pCode;
 	private String medicalTel;
-	private String medicalLocation;
+	private String medicalLocationArea1;
+	private String medicalLocationArea2;
 	
-	public String getMedicalLocation() {
-		return medicalLocation;
+	public String getMedicalLocationArea1() {
+		return medicalLocationArea1;
 	}
-	public void setMedicalLocation(String medicalLocation) {
-		this.medicalLocation = medicalLocation;
+	public void setMedicalLocationArea1(String medicalLocationArea1) {
+		this.medicalLocationArea1 = medicalLocationArea1;
+	}
+	public String getMedicalLocationArea2() {
+		return medicalLocationArea2;
+	}
+	public void setMedicalLocationArea2(String medicalLocationArea2) {
+		this.medicalLocationArea2 = medicalLocationArea2;
 	}
 	public int getMedicalId() {
 		return medicalId;

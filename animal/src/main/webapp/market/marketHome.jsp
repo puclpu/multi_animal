@@ -1,7 +1,6 @@
-<%@page import="com.sun.xml.internal.txw2.Document"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%-- <%session.setAttribute("address", "부산 남구"); %> --%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -155,7 +154,7 @@
 </script>
 </head>
 <body>
-<%-- <jsp:include page="../home/animal_header.jsp"></jsp:include> --%>
+<jsp:include page="../header/animal_header.jsp"></jsp:include>
 <br>
 <br>
 <br>

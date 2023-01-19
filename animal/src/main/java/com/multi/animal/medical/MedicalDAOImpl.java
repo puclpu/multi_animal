@@ -21,4 +21,9 @@ public class MedicalDAOImpl implements MedicalDAOInterface {
 	public MedicalVO SearchOne(MedicalVO vo) {
 		return mybatis.selectOne("medical.selectOne", vo);
 	}
+	
+	@Override
+	public List<MedicalVO> LoadAddress(MedicalVO vo) {
+		return mybatis.selectList("medical.selectLoad", vo);
+	}
 }

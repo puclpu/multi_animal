@@ -15,8 +15,18 @@
 
 </head>
 <body>
-<h3>채팅</h3>
+
+<jsp:include page="../../../header/animal_header.jsp"></jsp:include>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 <div class="marketHomeDiv">
+<h3>채팅</h3>
+<br>
+<br>
 <table border="1" class="marketTable">
 	<c:forEach var="vo" items="${list}">
 		<tr>
