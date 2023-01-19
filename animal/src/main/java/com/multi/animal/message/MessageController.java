@@ -22,19 +22,19 @@ public class MessageController {
 	@MessageMapping("/chat")
 	@SendTo("/market/messages")
 	public MessageVO send(MessageVO messageVO) {
-		System.out.println(messageService.send(messageVO));
+		//System.out.println(messageService.send(messageVO));
 		return messageService.send(messageVO);// return데이터는 json으로 만들어서 클라이언트 브라우저에 보냄.
 	}
 
 	@RequestMapping("message/messageList")
 	public void messageList(MessageVO messageVO, Model model) {
-		System.out.println(messageService.messageList(messageVO));
+		//System.out.println(messageService.messageList(messageVO));
 		model.addAttribute("list", messageService.messageList(messageVO));
 	}
 
 	@RequestMapping("message/chatRoomList")
 	public void chatRoomList(MessageVO messageVO, Model model) {
-		System.out.println(messageService.chatRoomList(messageVO));
+		//System.out.println(messageService.chatRoomList(messageVO));
 		model.addAttribute("list", messageService.chatRoomList(messageVO));
 
 	}

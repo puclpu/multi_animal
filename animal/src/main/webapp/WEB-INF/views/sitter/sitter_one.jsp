@@ -13,8 +13,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script type="text/javascript" src="../resources/js/jquery-3.6.1.min.js"></script>
+<link rel="stylesheet" href="../resources/css/medical.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<script type="text/javascript" src="../resources/js/jquery-3.6.1.min.js"></script>
 <script type="text/javascript">
 	$(function() {
 		var writer = "<%=writer %>";
@@ -48,16 +49,11 @@
 </head>
 <body>
 <div id = "total">
-	<%-- <a href="http://localhost:8081/animal/index.jsp" style="position: fixed;">
-		<img alt="logo" src="../resources/img/순양.png" width="100px;">
-	</a>
-	<div id = "top" style="height: 50px; display: inline-block; padding-left: 100px;">
-		<jsp:include page="../../../top.jsp"></jsp:include>
-	</div> --%>
+	<jsp:include page="../../../header/animal_header.jsp"></jsp:include>
 	<div id="center">
 		<table>
 			<tr>
-				<td rowspan="5"><img src="../resources/img/${vo.img }" width="300"></td>
+				<td rowspan="5"><img src="../resources/upload/${vo.img }" width="300"></td>
 				<td style="font-weight: bold;" class="text">[${vo.reserve }]</td>
 			</tr>
 			<tr><td class="sitterone">${vo.species }<td></tr>

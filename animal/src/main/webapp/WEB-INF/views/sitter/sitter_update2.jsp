@@ -18,13 +18,8 @@ h5{
 </head>
 <body>
 <div id = "total">
-	<%-- <a href="http://localhost:8081/animal/index.jsp" style="position: fixed;">
-		<img alt="logo" src="../resources/img/순양.png" width="100px;">
-	</a>
-	<div id = "top" style="height: 50px; display: inline-block; padding-left: 100px;">
-		<jsp:include page="../../../top.jsp"></jsp:include>
-	</div> --%>
-	<div id="center">
+	<jsp:include page="../../../header/animal_header.jsp"></jsp:include>
+	<div id="center" style="margin-top: 20%; text-align: center;">
 		<h5>시터 구인 수정이 완료되었습니다.</h5>
 		<a href="sitterSearch.jsp"><button class="btn btn-outline-secondary">검색하기</button></a>
 		<span><a href="sitterInsert.jsp"><button class="btn btn-outline-secondary">구인등록</button></a></span>

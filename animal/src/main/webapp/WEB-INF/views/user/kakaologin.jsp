@@ -6,5 +6,5 @@
 	session.setAttribute("userId", vo.getUserId());
 	session.setAttribute("name", vo.getName());
 	session.setAttribute("address", vo.getAddress());
-	response.sendRedirect("animal_main.jsp");
+	response.sendRedirect("main/animal_main.jsp");
 %>

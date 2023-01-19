@@ -13,8 +13,6 @@ public class WebSocketConfig extends AbstractWebSocketMessageBrokerConfigurer {
 	// 채팅 방 이름 설정
 	@Override
 	public void configureMessageBroker(MessageBrokerRegistry config) {
-//		config.enableSimpleBroker("/sitter");
-//		config.setApplicationDestinationPrefixes("/app");
 		config.enableSimpleBroker("/market");
 		config.setApplicationDestinationPrefixes("/app");
 	}

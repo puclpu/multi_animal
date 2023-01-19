@@ -5,13 +5,13 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/adopt.css">
+<link rel="stylesheet" type="text/css" href="../resources/css/adopt.css?after">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script type="text/javascript">
 	$(function() {
 		<%	
-			// session.removeAttribute("address");
+			//session.removeAttribute("address");
 			//session.invalidate();
 			String pPlace = null;
 			//session.setAttribute("address", "부산");
@@ -22,6 +22,9 @@
 				pPlace = session.getAttribute("address").toString().split(" ")[0];
 			} 
 		%>
+		if ("<%=session.getAttribute("userId")%>" != null) {
+			$('#Adopt_main_insertB').append('<button id="Adopt_main_insert">등록</button>')
+		} 
 		
 		$.ajax({
 			url : "adopt_all",
@@ -49,10 +52,10 @@
 </script>
 </head>
 <body>
-<%-- <%@ include file="/animal_header.jsp" %> --%>
+<%-- <%@ include file="animal_header2.jsp" %> --%> 
 		
 	<div id="Adopt_main_insertB">
-		<button id="Adopt_main_insert">등록</button>
+		<!-- <button id="Adopt_main_insert">등록</button> -->
 	</div>
 	<div id="result"> 
 	</div>

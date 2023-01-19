@@ -14,13 +14,7 @@
 </head>
 <body>
 <div id="total">
-	<%-- <a href="http://localhost:8081/animal/index.jsp" style="position: fixed;">
-		<img alt="logo" src="../resources/img/순양.png" width="100px;">
-	</a>
-	<div id = "top" style="height: 50px; display: inline-block; padding-left: 100px;">
-		<jsp:include page="../top.jsp"></jsp:include>
-	</div> --%>
-		
+	<jsp:include page="../header/animal_header.jsp"></jsp:include>	
 	<%if (session.getAttribute("userId") != null) { %>
 		<div class="tab_menu">
 			<a href="sitterInsert.jsp">시터 구하기</a>
@@ -79,7 +73,7 @@
 			</ul>
 		</div> <!-- tab menu -->
 	<%} else { %>
-		<div id="center">
+		<div id="center" style="margin-top: 20%; text-align: center;">
 			<h5>로그인 후 이용 가능한 페이지입니다.</h5>
 		</div> <!-- center -->
 	<%} %>

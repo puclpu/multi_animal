@@ -28,12 +28,7 @@
 </head>
 <body>
 <div id = "total">
-	<%-- <a href="http://localhost:8081/animal/index.jsp">
-		<img alt="logo" src="../resources/img/순양.png" width="100px;">
-	</a>
-	<div id = "top" style="height: 50px; display: inline-block;">
-		<jsp:include page="../top.jsp"></jsp:include>
-	</div> --%>
+	<jsp:include page="../header/animal_header.jsp"></jsp:include>
 	<div id="center">
 		<form action="sitter_insert" id="form" method="post" enctype="multipart/form-data" name="form1" onsubmit="return checkNull();">
 			<table class="table table-borderless" id="insertform">

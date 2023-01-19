@@ -65,14 +65,14 @@ public class MissingBoardServiceImpl implements MissingBoardServiceInterface {
 			MultipartFile mFile = multipartRequest.getFile(fileName);
 			String originalFileName = mFile.getOriginalFilename();
 			fileList.add(originalFileName);
-			File file = new File(CURR_IMAGE_REPO_PATH + "\\" + fileName);
+			File file = new File(CURR_IMAGE_REPO_PATH + "/" + fileName);
 			if (mFile.getSize() != 0) {
 				if (!file.exists()) {
 					if (file.getParentFile().mkdir()) {
 						file.createNewFile();
 					}
 				}
-				mFile.transferTo(new File(CURR_IMAGE_REPO_PATH + "\\" + originalFileName));
+				mFile.transferTo(new File(CURR_IMAGE_REPO_PATH + "/" + originalFileName));
 			}
 		}
 		return fileList;

@@ -223,7 +223,7 @@ input {
 	cursor: pointer;
 }
 
-a {
+ a {
 	text-decoration: none;
 	display: inline-block;
 }
@@ -236,4 +236,4 @@ li {
 	list-style: none;
 	float: left;
 	margin: 0 30px 0 0;
-}
+} 

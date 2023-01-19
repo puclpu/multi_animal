@@ -19,7 +19,7 @@ public class MarketController {
 			throws Exception {
 
 		marketService.insert(marketVO, request, file);
-		System.out.println(marketService.insert(marketVO, request, file));
+		//System.out.println(marketService.insert(marketVO, request, file));
 		return "redirect:/market/marketHome.jsp";
 	}
 
@@ -33,7 +33,7 @@ public class MarketController {
 		model.addAttribute("list", marketService.searchByCategory(pageVO));
 		model.addAttribute("numberOfPages",
 				marketService.numberOfPages(marketService.countSearchByCategory(pageVO), pageVO.pageSize));
-		System.out.println(marketService.countSearchByCategory(pageVO));
+		//System.out.println(marketService.countSearchByCategory(pageVO));
 	}
 
 	@RequestMapping("market/update")
@@ -41,14 +41,14 @@ public class MarketController {
 			Model model) throws Exception {
 
 		marketService.update(marketVO, lastFile, request, file);
-		System.out.println(marketService.update(marketVO, lastFile, request, file));
+		//System.out.println(marketService.update(marketVO, lastFile, request, file));
 		return "redirect:/market/marketHome.jsp";
 	}
 
 	@RequestMapping("market/delete")
 	public String delete(MarketVO marketVO, HttpServletRequest request, String fileToDelete) {
 		marketService.delete(marketVO, request, fileToDelete);
-		System.out.println(marketService.delete(marketVO, request, fileToDelete));
+		//System.out.println(marketService.delete(marketVO, request, fileToDelete));
 		return "redirect:/market/marketHome.jsp";
 	}
 

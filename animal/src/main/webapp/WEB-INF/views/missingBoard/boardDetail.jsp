@@ -38,6 +38,7 @@
 </head>
 <body>
 	<%-- <jsp:include page="../../../header/header.jsp"></jsp:include> --%>
+	<jsp:include page="../../../header/animal_header.jsp"></jsp:include>
 	<div class="detail_container">
 		<div class="detail_header">
 			<h1 class="detail_title">우리아이를 찾습니다!!</h1>

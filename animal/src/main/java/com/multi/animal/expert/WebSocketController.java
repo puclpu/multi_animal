@@ -12,7 +12,6 @@ public class WebSocketController {
 	ExpertService es;
 	
 	@MessageMapping("/expert")
-//	@SendTo("/sitter/messages2")
 	@SendTo("/market/messages2")
 	public OutputMessage2 send2(Message message, ExpertVO expertvo) {
 		String menu = "";

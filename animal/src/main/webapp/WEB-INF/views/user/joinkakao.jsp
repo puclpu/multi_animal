@@ -1,10 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page import="java.util.*"%>
+<c:set var="path" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="${path }/resources/css/medical.css">
+<link rel="stylesheet" href="${path}/resources/css/sittercss.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 <script type="text/javascript" src="../resources/js/jquery-3.6.1.min.js"></script>
 <script type="text/javascript">
 	function checkNull(){
@@ -26,63 +32,31 @@
 		}
 	}
 </script>
-<link rel="stylesheet"
-	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-<script
-	src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
-<script
-	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-<script
-	src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-<style type="text/css">
-#total {
-	width: 100%;
-	height: 100%;
-}
-
-#center {
-	width: 500px;
-	height: 500px;
-	margin: 0 auto;
-	margin-top: 50px;
-}
-
-table {
-	text-align: center;
-}
-</style>
 </head>
 <body>
 	<div id="total">
-		<%-- <a href="http://localhost:8081/animal/index.jsp"> <img alt="logo"
-			src="../resources/img/순양.png" width="100px;">
-		</a>
-		<div id="top" style="height: 50px; display: inline-block;">
-			<jsp:include page="../../../top.jsp"></jsp:include>
-		</div> --%>
-		<div id="center">
+		<jsp:include page="../../../header/animal_header.jsp"></jsp:include>
+		<div id="center" style="margin-top: 20px;">
 			<form action="join" name="form1" onsubmit="return checkNull();" method="post">
 				<table class="table table-borderless">
 					<tr>
 						<td>아이디</td>
-						<td><input value="${userId }" readonly="readonly"
-							name="userId"></td>
+						<td colspan="2"><input value="${userId }" readonly="readonly"
+							name="userId" class="form-control form-control"></td>
 					</tr>
 					<tr>
 						<td>이름</td>
-						<td><input type="text" value="${name }" name="name"></td>
+						<td colspan="2"><input type="text" value="${name }" name="name" class="form-control form-control"></td>
 					</tr>
 					<tr>
 						<td>전화번호</td>
-						<td><input type="text" name="phone" placeholder="010-1234-5678"></td>
+						<td colspan="2"><input type="text" name="phone" placeholder="010-1234-5678" class="form-control form-control"></td>
 					</tr>
 					<tr>
 						<td>주소</td>
 						<td>
-							<input type="text" id="address" placeholder="주소" name="add1">
-							<input type="button" onclick="execDaumPostcode()" value="검색">
-							<br><input type="text"
-							id="detailAddress" placeholder="상세주소" name="add2">
+							<input type="text" id="address" placeholder="주소" name="add1" class="form-control form-control">
+							<input type="text" id="detailAddress" placeholder="상세주소" name="add2" class="form-control form-control">
 							<input type="hidden" id="sigungu" name="sigungu">
 							<input type="hidden" id="sigunguCode" name="sigunguCode">
 							<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
@@ -120,13 +94,16 @@ table {
 												}
 										}).open();
 								}
-							</script></td>
+							</script>
+						</td>
+						<td>
+							<input type="button" onclick="execDaumPostcode()" value="검색" class="btn btn-outline-secondary">
+						</td>
 					</tr>
-					<tr><td colspan="2"><button class="btn btn-light">가입</button></td></tr>
+					<tr><td colspan="3" style="text-align: center;"><button class="btn btn-light">가입</button></td></tr>
 				</table>
 			</form>
 		</div>
 	</div>
-
 </body>
 </html>

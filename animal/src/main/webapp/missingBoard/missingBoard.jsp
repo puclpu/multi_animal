@@ -99,7 +99,7 @@
 </script>
 </head>
 <body>
-	<%-- <jsp:include page="../header/header.jsp"></jsp:include> --%>
+	<jsp:include page="../header/animal_header.jsp"></jsp:include> 
 	<div class="missing_container">
 		<div class="missing_header">
 			<h1 class="missing_title">실종 목록</h1>

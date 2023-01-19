@@ -5,22 +5,13 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="../resources/css/header.css">
+<link rel="stylesheet" href="../resources/css/medical.css">
 <link rel="stylesheet" href="../resources/css/missingBoardInsert.css">
 <link rel="stylesheet" href="../resources/css/style.css">
 <script src="http://code.jquery.com/jquery-3.2.1.js"></script>
-<script>
-	var cnt = 1;
-	function fn_addFile() {
-		if (cnt < 4) {
-			$("#d_file").append(
-					"<input type='file' name='file" + cnt + "' />" + "<br>");
-			cnt++;
-		}
-	}
-</script>
 </head>
 <body>
+	<jsp:include page="../header/animal_header.jsp"></jsp:include>
 	<%-- <jsp:include page="../header/header.jsp"></jsp:include> --%>
 	<div style="height: 818px;">
 		<div class="insert_container">
@@ -29,7 +20,8 @@
 				<div style="height: 35px;"></div>
 				<form action="create" method="post" enctype="multipart/form-data">
 					<ul>
-						<li>*등록인 : <input type="text" name="userId" value="<%=session.getAttribute("userId") %>"
+						<li>*등록인 : <input type="text" name="userId"
+							value="<%=session.getAttribute("userId")%>"
 							placeholder="내용을 입력하세요." readonly="readonly"></li>
 						<li>*글 제목 : <input type="text" name="title"
 							placeholder="내용을 입력하세요." required></li>
@@ -57,10 +49,13 @@
 						<li>*사례금 : <input type="text" name="gratuity"
 							placeholder="내용을 입력하세요." required>원
 						</li>
-						<li class="multi_file">*사진첨부 : <input type="button"
-							value="파일 추가" onClick="fn_addFile()"> (3개까지 가능) <br>
-
-							<div id="d_file"></div>
+						<li class="multi_file">
+							<div style="float: left;">*사진첨부 :</div>
+							<div id="d_file">
+								<input type='file' name='file1' /><br> <input type='file'
+									name='file2' /><br> <input type='file' name='file3' />
+							</div>
+						</li>
 					</ul>
 					<button type="submit" class="insert_btn1">등록</button>
 				</form>

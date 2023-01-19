@@ -17,6 +17,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script type="text/javascript" src="../resources/js/jquery-3.6.1.min.js"></script>
+<link rel="stylesheet" href="../resources/css/medical.css">
 <link rel="stylesheet" href="../resources/css/sittercss.css">
 <script type="text/javascript">
 	$(function() {
@@ -36,12 +37,7 @@
 </head>
 <body>
 	<div id="total">
-<%-- 		<a href="http://localhost:8081/animal/index.jsp" style="position: fixed;"> 
-			<img alt="logo" src="../resources/img/순양.png" width="100px;">
-		</a>
-		<div id = "top" style="height: 50px; display: inline-block; padding-left: 100px;">
-			<jsp:include page="../../../top.jsp"></jsp:include>
-		</div>  --%>
+		<jsp:include page="../../../header/animal_header.jsp"></jsp:include>
 		<div id="center">
 			<div id="filter">
 				<form action="sitter_filter">
@@ -67,7 +63,7 @@
 						<li>
 							<div class="one">
 	 							<a href="sitter_one?sitterId=${vo.sitterId}">
-	 								<img src="../resources/img/${vo.img }" width="200" height="150"> <br>
+	 								<img src="../resources/upload/${vo.img }" width="200" height="150"> <br>
 	 							</a>
 	 							<span style="font-size: 13px;">${vo.reserve }</span> <br>
 	 							<span style="font-size: 17px;">${vo.species }  ${vo.care }</span> <br>

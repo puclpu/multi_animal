@@ -21,7 +21,7 @@
 </head>
 
 <body>
-	<jsp:include page="medicalHeader.jsp"></jsp:include>
+	<%-- <jsp:include page="../animal_header.jsp"></jsp:include> --%>
 
 	<div id="medicalSearchResultInfo"></div>
 

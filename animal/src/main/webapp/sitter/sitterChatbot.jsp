@@ -129,6 +129,7 @@ p{
 </head>
 <body onload="connect();">
 	<div id="total">
+		<jsp:include page="../header/animal_header.jsp"></jsp:include>
 		<div id="center">
 			<div>
 				<p>

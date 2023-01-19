@@ -1,7 +1,7 @@
 <%@page import="com.sun.xml.internal.txw2.Document"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%-- <%session.setAttribute("userId", "tjddnr2814"); %> --%>
+<%-- <%session.setAttribute("address", "부산 남구"); %> --%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,11 +9,12 @@
 <title>Insert title here</title>
 <link href="../resources/css/market.css" rel="stylesheet">
 <script type="text/javascript" src="../resources/js/jquery-3.6.1.js"></script>
+<script type="text/javascript"
+	src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=mcn4h7vwlk&submodules=geocoder,panorama"></script>
 <script type="text/javascript">
-
 	$(function() {
-
-		var area0 = ["시/도 선택","서울특별시","인천광역시","대전광역시","광주광역시","대구광역시","울산광역시","부산광역시","경기도","강원도","충청북도","충청남도","전라북도","전라남도","경상북도","경상남도","제주도"];
+		
+		var area0 = ["시/도 선택","서울특별시","인천광역시","대전광역시","광주광역시","대구광역시","울산광역시","부산광역시","경기도","강원도","충청북도","충청남도","전라북도","전라남도","경상북도","경상남도","제주특별자치도"];
 		  var area1 = ["강남구","강동구","강북구","강서구","관악구","광진구","구로구","금천구","노원구","도봉구","동대문구","동작구","마포구","서대문구","서초구","성동구","성북구","송파구","양천구","영등포구","용산구","은평구","종로구","중구","중랑구"];
 		   var area2 = ["계양구","남구","남동구","동구","부평구","서구","연수구","중구","강화군","옹진군"];
 		   var area3 = ["대덕구","동구","서구","유성구","중구"];
@@ -51,33 +52,87 @@
 		  else {
 			$gugun.append("<option value=''>구/군 선택</option>");
 		   $.each(eval(area), function() {
-			
 		    $gugun.append("<option value='"+this+"'>"+this+"</option>");
 		   });
 		  }
-		  search();
 		 });
-		 $("select[name^=gugun]").change(function() {
+		 $("select[name^=sido]").click(function() {
 			 search();
 		 })
-		<%String sido = null;
+		 $("select[name^=gugun]").change(function() {
+			search();
+		 })
+		
+		 <%String sido = null;
 		String gugun = null;
 			if (session.getAttribute("address") != null) {
 				sido = session.getAttribute("address").toString().split(" ")[0];
 				gugun = session.getAttribute("address").toString().split(" ")[1];
+				switch(sido){
+				case "서울":
+					sido = "서울특별시";
+				break;
+				case "인천":
+					sido = "인천광역시";
+				break;
+				case "대전":
+					sido = "대전광역시";
+				break;
+				case "광주":
+					sido = "광주광역시";
+				break;
+				case "대구":
+					sido = "대구광역시";
+				break;
+				case "울산":
+					sido = "울산광역시";
+				break;
+				case "부산":
+					sido = "부산광역시";
+				break;
+				case "경기":
+					sido = "경기도";
+				break;
+				case "강원":
+					sido = "강원도";
+				break;
+				case "충북":
+					sido = "충청북도";
+				break;
+				case "충남":
+					sido = "충청남도";
+				break;
+				case "전북":
+					sido = "전라북도";
+				break;
+				case "전남":
+					sido = "전라남도";
+				break;
+				case "경북":
+					sido = "경상북도";
+				break;
+				case "경남":
+					sido = "경상남도";
+				break;
+				}
 			}%> 
-		if(<%=session.getAttribute("address")%> != null){	
-			$('#sido1').val("<%=sido%>").prop("selected", true).trigger("change")
-			$('#gugun1').val("<%=gugun%>").prop("selected", true).trigger("change")
-			// 사용자의 회원 정보에 등록된  주소에 따라 지역 셀렉트박스 옵션 설정
-		} else{
+			
+			if("<%=session.getAttribute("address")%>" != "null"){
+				
+				$('#sido1').val("<%=sido%>").prop("selected", true).trigger("change");
+				$('#gugun1').val("<%=gugun%>").prop("selected", true).trigger("change");
+				
+				
+				// 사용자의 회원 정보에 등록된  주소에 따라 지역 셀렉트박스 옵션 설정
+			} else{
+				$('#sido1').val("시/도 선택").prop("selected", true).trigger("change");
+				$('#gugun1').val("").prop("selected", true).trigger("change");
+			}
 			search();
-		}
+			
 		$('#b1').click(function() {
 			search();
 		})//b1
-		
-		$('#b1').click()
 		
 	})//func
 
@@ -97,12 +152,10 @@
 		})
 	}//function search()
 	
-
-	
 </script>
 </head>
 <body>
-<%-- <jsp:include page="../home/medicalHeader.jsp"></jsp:include> --%>
+<%-- <jsp:include page="../home/animal_header.jsp"></jsp:include> --%>
 <br>
 <br>
 <br>
@@ -138,6 +191,7 @@
 	<br>
 	<br>
 	<div id="result"></div>
+	<div id="map"></div>
 	</div>
 </body>
 </html>
