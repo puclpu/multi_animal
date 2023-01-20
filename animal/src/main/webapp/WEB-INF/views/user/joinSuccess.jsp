@@ -18,11 +18,11 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="${path }/resources/css/medical.css">
-<link rel="stylesheet" href="${path}/resources/css/sittercss.css">
+<link rel="stylesheet" href="${path }/resources/css/sittercss.css">
 </head>
 <body>
 	<div id="total">
-		<jsp:include page="../../../header/animal_header.jsp"></jsp:include>
+		<jsp:include page="../../../header/animal_header2.jsp"></jsp:include>
 		<div id="center" style="margin-top: 20%; text-align: center;">
 			<h3>환영합니다.</h3>
 			<h3>회원가입이 완료되었습니다.</h3>

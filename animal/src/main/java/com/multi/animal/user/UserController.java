@@ -2,8 +2,6 @@ package com.multi.animal.user;
 
 import java.util.HashMap;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,12 +12,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class UserController {
-
-//	@RequestMapping("kakaologin/oauth")
-//	public String user() {
-//		System.out.println("!!!");
-//		return "redirect:index.jsp";
-//	}
 	
 	@Autowired
 	private UserServiceInterface us;
@@ -65,4 +57,5 @@ public class UserController {
 		model.addAttribute("vo", vo);
 		return "user/joinSuccess";
 	}
+
 }

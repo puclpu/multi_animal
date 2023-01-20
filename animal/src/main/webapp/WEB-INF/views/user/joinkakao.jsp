@@ -35,7 +35,7 @@
 </head>
 <body>
 	<div id="total">
-		<jsp:include page="../../../header/animal_header.jsp"></jsp:include>
+		<jsp:include page="../../../header/animal_header2.jsp"></jsp:include>
 		<div id="center" style="margin-top: 20px;">
 			<form action="join" name="form1" onsubmit="return checkNull();" method="post">
 				<table class="table table-borderless">
