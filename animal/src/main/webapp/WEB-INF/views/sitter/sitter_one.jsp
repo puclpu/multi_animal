@@ -35,9 +35,9 @@
     margin:0 auto;
     margin-top: 90px;
 }
-.sitterone, .comment{
+/* .sitterone, .comment{
 	padding-left: 10px;
-}
+} */
 .sitterone{
 	height: 30px;
 }
@@ -51,9 +51,9 @@
 <div id = "total">
 	<jsp:include page="../../../header/animal_header.jsp"></jsp:include>
 	<div id="center">
-		<table>
+		<table class="table">
 			<tr>
-				<td rowspan="5"><img src="../resources/upload/${vo.img }" width="300"></td>
+				<td rowspan="5"><img src="../resources/upload/${vo.img }" width="300px"></td>
 				<td style="font-weight: bold;" class="text">[${vo.reserve }]</td>
 			</tr>
 			<tr><td class="sitterone">${vo.species }<td></tr>

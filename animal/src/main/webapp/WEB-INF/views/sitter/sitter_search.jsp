@@ -27,11 +27,11 @@
 				<option value="방문 돌봄 (30분)">방문 돌봄 (30분)
 				<option value="산책 돌봄 (30분)">산책 돌봄 (30분)
 			</select>
-			<input type="date" name="dateStart" min="2022-12-24" max="2023-12-31" class="currentDate">
-			- <input type="date" name="dateEnd" min="2022-12-24" max="2023-12-31" class="currentDate">
+			<input type="date" name="dateStart" min="2022-12-24" max="2023-12-31" id="currentDate1">
+			- <input type="date" name="dateEnd" min="2022-12-24" max="2023-12-31" id="currentDate2">
 			<script>
-				document.getElementsByClassName('currentDate')[0].value = new Date().toISOString().substring(0, 10);
-				document.getElementsByClassName('currentDate')[1].value = new Date().toISOString().substring(0, 10);
+				document.getElementById('currentDate1').value = new Date().toISOString().substring(0, 10);
+				document.getElementById('currentDate2').value = new Date().toISOString().substring(0, 10);
 			</script>
 			<input name="page" type="hidden" value="1">
 			<input type="hidden" name="searcher" value="<%=session.getAttribute("userId") %>">
@@ -64,7 +64,8 @@
  		<%int pages = (int)request.getAttribute("pages");
  			for(int p = 1; p <= pages; p++) {
 		 %>
-		 	<a href="sitter_search?species=${keyword.species}&page=<%=p %>&care=${keyword.care }&date=${keyword.date }"><%=p %></a>
+		 	<a href="sitter_search?species=${keyword.species}&page=<%=p %>
+		 	&care=${keyword.care }&date=${keyword.date }"><%=p %></a>
 		 <%} %>
 	</div>
 	</div>

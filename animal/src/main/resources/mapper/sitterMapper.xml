@@ -7,10 +7,6 @@
 		#{comment}, #{img}, #{userId}, #{sitterTel})
 	</insert>
 	<select id="search" parameterType="map" resultType="sitterVO">
-		<!-- select * from (select row_number() over(order by sitterId desc) as 
-			sitterNo,s.* from Sitter s where date = #{SitterVO.date} and species = #{SitterVO.species} 
-			and care = #{SitterVO.care}) s2 where s2.sitterNo between #{PageVO.start} 
-			and #{PageVO.end} -->
 		select * from (
 		select ROW_NUMBER() over(order by s.sitterId DESC) as
 		sitterNo, s.*
@@ -23,8 +19,6 @@
 		#{PageVO.end}
 	</select>
 	<select id="scount" parameterType="map" resultType="Integer">
-		<!-- select count(*) from Sitter s where date = #{date} and species = #{species} 
-			and care = #{care} -->
 		select count(*) from Sitter s
 		inner JOIN `User` u on s.userId =
 		u.userId
@@ -54,11 +48,6 @@
 		= #{sitterId}
 	</update>
 	<select id="filter" parameterType="map" resultType="sitterVO">
-		<!-- select * from (select row_number() over(order by s.sitterId desc) 
-			as sitterNo, s.* from (select * from Sitter where date <![CDATA[>=]]> #{FilterVO.dateStart}) 
-			s INNER JOIN (select * from Sitter where date <![CDATA[<=]]> #{FilterVO.dateEnd}) 
-			e ON s.sitterId = e.sitterId where s.species = #{FilterVO.species} and s.care=#{FilterVO.care}) 
-			r where r.sitterNo BETWEEN #{PageVO.start} and #{PageVO.end} -->
 		select r.*
 		from (select row_number() over(order by s.sitterId desc) as
 		sitterNo, s.*

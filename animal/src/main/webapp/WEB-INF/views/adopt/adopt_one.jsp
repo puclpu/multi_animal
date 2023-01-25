@@ -52,7 +52,7 @@
 </script>
 </head>
 <body>
-<jsp:include page="../../../header/animal_header.jsp"></jsp:include> 
+<jsp:include page="../../../header/animal_header2.jsp"></jsp:include>
 <a href="adopt_main.jsp">
 		<button id="Adopt_one_back">목록으로</button>
 </a>

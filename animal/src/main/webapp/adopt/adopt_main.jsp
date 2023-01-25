@@ -22,7 +22,7 @@
 				pPlace = session.getAttribute("address").toString().split(" ")[0];
 			} 
 		%>
-		if ("<%=session.getAttribute("userId")%>" != null) {
+		if ('<%=session.getAttribute("userId")%>' != 'null') {
 			$('#Adopt_main_insertB').append('<button id="Adopt_main_insert">등록</button>')
 		} 
 		

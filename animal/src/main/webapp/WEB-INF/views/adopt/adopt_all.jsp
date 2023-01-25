@@ -97,7 +97,7 @@
 	<br>
 </div>
 <div id="search_result">
-	<h3 id="Adopt_all_count">근처 목록 : ${count}개</h3>
+	<h3 id="Adopt_all_count"><%=pPlace %> 목록 : ${count}개</h3>
 	
 	<c:set var="i" value="0" />
 	<c:set var="j" value="3" />

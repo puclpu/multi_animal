@@ -36,6 +36,8 @@
 	width: 120px;
 	height: 120px;
 	border-radius: 20px;
+	display: block;
+	margin: auto;
 }
 
 .partnerImg {
@@ -154,7 +156,7 @@ textarea {
 	color: #990000;
 }
 
-.sendButton{
+.sendButton {
 	margin: 10px 0 0 0px;
 	-webkit-appearance: none;
 	-moz-appearance: none;
@@ -242,7 +244,7 @@ input {
 	cursor: pointer;
 }
 
- a {
+a {
 	text-decoration: none;
 	display: inline-block;
 }
@@ -255,4 +257,4 @@ li {
 	list-style: none;
 	float: left;
 	margin: 0 30px 0 0;
-} 
+}

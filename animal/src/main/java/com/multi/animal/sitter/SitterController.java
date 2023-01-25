@@ -92,7 +92,8 @@ public class SitterController {
 	}
 	
 	@RequestMapping("sitter/sitter_filter")
-	public void filter(PageVO pagevo, FilterVO filtervo, Model model, UserVO uservo, String searcher) {
+	public void filter(PageVO pagevo, FilterVO filtervo, Model model,
+			UserVO uservo, String searcher) {
 		// 검색자의 시군구 코드 받아오기
 		uservo = sitterService.getSigunguCode(searcher);
 		System.out.println(uservo);

@@ -24,9 +24,7 @@ function goPopup(){
 //호출하게 됩니다.
 var pop = window.open("jusoPopup.jsp","pop","width=700,height=550, scrollbars=yes, resizable=yes"); 
 }
-function jusoCallBack(roadFullAddr,engAddr, jibunAddr, admCd, 
-rnMgtSn, bdMgtSn , detBdNmList, bdNm, bdKdcd, siNm, sggNm, emdNm, liNm, rn, udrtYn, buldMnnm, 
-buldSlno, mtYn, lnbrMnnm, lnbrSlno, emdNo){
+function jusoCallBack(roadFullAddr){
 document.form.roadFullAddr.value = roadFullAddr;
 }
 

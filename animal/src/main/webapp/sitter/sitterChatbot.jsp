@@ -118,7 +118,7 @@ p{
 	padding : 10px;
 	margin-top: 10px;
 	display : inline-block;
-	background: silver;
+	background: #FFE5CC;
 	border-radius: 0px 20px 20px 30px;
 }
 .sender{

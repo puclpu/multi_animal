@@ -110,6 +110,16 @@ p{
 					</td>
 				</tr>
 				<tr>
+					<td>마리</td>
+					<td>
+						<select name="animals" class="form-control">
+							<option value="1">1
+							<option value="2">2
+							<option value="3">3
+						</select>
+					</td>
+				</tr>
+				<tr>
 					<td>날짜</td>
 					<td>
 						<input type="date" name="date" id="currentDate" value="${vo.date }" min="2022-12-24" max="2023-12-31" class="form-control form-control"> 
@@ -119,14 +129,8 @@ p{
 					</td>
 				</tr>
 				<tr>
-					<td>마리</td>
-					<td>
-						<select name="animals" class="form-control">
-							<option value="1">1
-							<option value="2">2
-							<option value="3">3
-						</select>
-					</td>
+					<td>연락처</td>
+					<td><input type="text" id="sitterTel" name="sitterTel" value="${vo.sitterTel }" class="form-control form-control"></td>
 				</tr>
 				<tr>
 					<td>기타 요구사항</td>

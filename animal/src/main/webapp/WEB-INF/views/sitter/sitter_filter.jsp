@@ -53,6 +53,7 @@
 					<input type="date" name="dateStart" value="${keyword.dateStart }" min="2022-12-24" max="2023-12-31">
 					- <input type="date" name="dateEnd" value="${keyword.dateEnd }" min="2022-12-24" max="2023-12-31">
 					<input name="page" type="hidden" value="1">
+					<input type="hidden" name="searcher" value="<%=session.getAttribute("userId") %>">
 					<button>검색</button>
 				</form>
 			</div>

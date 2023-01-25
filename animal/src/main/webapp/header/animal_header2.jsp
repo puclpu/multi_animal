@@ -3,9 +3,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import = "java.util.*" %>
 <c:set var="path" value="${pageContext.request.contextPath }" />
-<link rel="stylesheet" href="../resources/css/medical.css">
+<link rel="stylesheet" href="${path }/resources/css/medical.css">
 <div id="medicalHeader">
-   <a class="medical-logo" href="${path }/main/animal_main.jsp"><img src="./resources/img/순양.png"></a>
+   <a class="medical-logo" href="${path }/main/animal_main.jsp"><img src="${path }/resources/img/순양.png"></a>
    
    <div class="medical-menu-wrap">
       <nav class="medical-menu-list">
